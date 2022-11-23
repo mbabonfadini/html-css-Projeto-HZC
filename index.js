@@ -21,6 +21,7 @@ startOption.addEventListener("click", () => {
         IntegrantesOption.classList.toggle("sideMenuLinkAtivo")
         CamisasOption.classList.toggle("sideMenuLinkAtivo")
         PinturasOption.classList.toggle("sideMenuLinkAtivo")
+        menu.classList.toggle("sideMenuActive")
     }
 })
 
@@ -28,4 +29,5 @@ startOption.addEventListener("click", () => {
 videoOption.addEventListener("click", () => {
     videoOption.classList.toggle("sideMenuLinkAtivo")
     startOption.classList.toggle("sideMenuLinkAtivo")
+    menu.classList.toggle("sideMenuActive")
 })

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'icones';
-    src: url(../font/icones.ttf);
+    src: url(/font/icones.ttf);
 }
 
 body {
@@ -171,9 +171,6 @@ body {
 
 .principal {
     padding: 24px 16px;
-    display: grid;
-    gap: 16px;
-    
 }
 
 
@@ -188,8 +185,9 @@ body {
 
 @media screen and (min-width:1440px) {
     .principal {
-        display: grid;
         grid-template-columns: auto 1fr auto;
+        display: grid;
+        gap: 16px;
         column-gap: 32px;
         padding: 16px 60px;
         grid-column: 2;
@@ -392,10 +390,7 @@ body {
     content: "\e905";
     margin-right: 8px; }
 
-
-
-
-@media screen and(min-width:1440px){
+@media screen and (min-width:1440px){
     .containerVideos {
         grid-area: containerVideos;
     }
