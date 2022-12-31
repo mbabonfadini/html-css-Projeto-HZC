@@ -1,33 +1,29 @@
 const menuButton = document.querySelector(".headerMenu")
 const menu = document.querySelector(".sideMenu")
-const optionButton = document.querySelector(".sideMenu")
-const startOption = document.querySelector(".linkInicio")
-const videoOption = document.querySelector(".linkVideo")
-const PicosOption = document.querySelector(".linkPicos")
-const IntegrantesOption = document.querySelector(".linkIntegrantes")
-const CamisasOption = document.querySelector(".linkCamisas")
-const PinturasOption = document.querySelector(".linkPinturas")
+const btLaterais = document.querySelectorAll(".sideMenuLink")
 
 menuButton.addEventListener("click", () =>{
     menu.classList.toggle("sideMenuActive")
 })
 
-startOption.addEventListener("click", () => {
-    if("sideMenuLinkAtivo" in startOption.classList.item){
-    } else {
-        startOption.classList.toggle("sideMenuLinkAtivo")
-        videoOption.classList.toggle("sideMenuLinkAtivo")
-        PicosOption.classList.toggle("sideMenuLinkAtivo")
-        IntegrantesOption.classList.toggle("sideMenuLinkAtivo")
-        CamisasOption.classList.toggle("sideMenuLinkAtivo")
-        PinturasOption.classList.toggle("sideMenuLinkAtivo")
-        menu.classList.toggle("sideMenuActive")
+function btSideMenu(){
+    console.log(btLaterais)
+}
+
+
+btLaterais.forEach((elemento)=>{
+    elemento.addEventListener("click",()=>{
+        btLateraisSelected(elemento)
+    })
+})
+
+function btLateraisSelected(elemento){
+    for(let i=0;i<btLaterais.length;i++){
+        if(btLaterais[i].textContent != elemento.textContent){
+            btLaterais[i].classList.remove("sideMenuLinkAtivo")
+        }
+        else(
+            btLaterais[i].classList.add("sideMenuLinkAtivo")
+        )
     }
-})
-
-
-videoOption.addEventListener("click", () => {
-    videoOption.classList.toggle("sideMenuLinkAtivo")
-    startOption.classList.toggle("sideMenuLinkAtivo")
-    menu.classList.toggle("sideMenuActive")
-})
+}
